@@ -23,7 +23,7 @@
     superView.backgroundColor = [UIColor grayColor];
     [superView addSubview:_dotView];
     _dotView.center = superView.center;
-    NSLog(@"%.2f, %.2f",_dotView.center.x,_dotView.center.y);
+//    NSLog(@"%.2f, %.2f",_dotView.center.x,_dotView.center.y);
     [self.view addSubview:superView];
     
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAtion) userInfo:nil repeats:YES];
@@ -34,7 +34,7 @@
 - (void)timerAtion{
     CGFloat x = self.dotView.center.x +1;
     self.dotView.center = CGPointMake(x, self.dotView.center.y);
-     NSLog(@"%.2f, %.2f",_dotView.center.x,_dotView.center.y);
+//     NSLog(@"%.2f, %.2f",_dotView.center.x,_dotView.center.y);
     [self.dotView makeAnimation];
 }
 
